@@ -89,58 +89,424 @@ export default function AISystemPage() {
 4. Check memory usage during extended application use
 5. Test application startup time on various devices`
       } else if (activeTab === "image") {
-        sampleResult = `# UI Test Plan Generated from Screenshot
+        sampleResult = `# UI Test Plan Generated from Screenshot1. Functional Test Cases
+Verify user login functionality with valid and invalid credentials.
 
-## Visual Elements:
-1. Verify header layout and logo placement
-2. Validate navigation menu structure and spacing
-3. Check button styling consistency across the interface
-4. Test form field alignment and grouping
-5. Verify footer content and link placement
+Test form validation for all required fields.
 
-## Functional Tests:
-1. Validate all navigation links lead to correct destinations
-2. Test form submission with valid and invalid data
-3. Verify responsive behavior at breakpoints: 320px, 768px, 1024px, 1440px
-4. Check hover and active states for all interactive elements
-5. Validate error message display for form validation
+Validate error messages for invalid inputs.
 
-## Accessibility Tests:
-1. Verify color contrast meets WCAG AA standards
-2. Test keyboard navigation through all interactive elements
-3. Validate heading hierarchy for screen readers
-4. Ensure all images have appropriate alt text
-5. Test focus indicators for visibility and clarity
+Check navigation between all major screens.
 
-## Performance Tests:
-1. Measure time to interactive for main UI components
-2. Validate smooth scrolling and animations
-3. Check load time for images and media content
-4. Test UI responsiveness during background operations
-5. Verify state transitions and loading indicators`
-      } else if (activeTab === "url") {
-        sampleResult = `# Test Plan for URL: ${urlInput}
+Verify data persistence across sessions.
 
-## Functional Test Cases:
-1. Verify all links on the homepage are working correctly
-2. Test user authentication flow (login/logout/registration)
-3. Validate search functionality with various queries
-4. Check form submissions and data handling
-5. Test pagination and sorting functionality
+Ensure search functionality returns correct results.
 
-## Cross-browser Testing:
-1. Verify consistent appearance in Chrome, Firefox, Safari, and Edge
-2. Test responsive behavior across different viewport sizes
-3. Validate touch interactions on mobile devices
-4. Check font rendering across different browsers
-5. Test performance metrics across browser environments
+Test CRUD operations (Create, Read, Update, Delete) for user data.
 
-## Security Testing:
-1. Validate input sanitization for all form fields
-2. Test for common vulnerabilities (XSS, CSRF)
-3. Check secure cookie handling and session management
-4. Verify proper implementation of HTTPS
-5. Test error handling to ensure no sensitive information is exposed`
+Validate logout functionality and session expiration handling.
+
+Test user roles and permissions.
+
+Check that email verification and password reset processes work correctly.
+
+2. UI/UX Test Cases
+Validate responsive design on mobile, tablet, and desktop.
+
+Check color contrast for accessibility compliance (WCAG standards).
+
+Verify all buttons and interactive elements have proper hover states.
+
+Test keyboard navigation for accessibility compliance.
+
+Validate form field focus states and tab order.
+
+Check typography consistency (font sizes, colors, spacing).
+
+Ensure correct alignment of elements across different screen sizes.
+
+Verify animations and transitions work smoothly.
+
+Test dark mode or theme switching functionality (if available).
+
+Ensure error/success messages are readable and well-positioned.
+
+3. Performance Test Cases
+Measure page load time under various network conditions.
+
+Test application behavior under high user load.
+
+Validate API response times for critical operations.
+
+Check memory usage during extended application use.
+
+Test application startup time on various devices.
+
+Simulate stress testing by increasing concurrent users.
+
+Evaluate database query execution times.
+
+Measure time taken for complex computations.
+
+Test for performance degradation over time (long-duration tests).
+
+Check response time of third-party integrations (if any).
+
+4. Security Test Cases
+Validate input sanitization for all form fields.
+
+Test for common vulnerabilities like SQL injection, XSS, CSRF.
+
+Check secure cookie handling and session management.
+
+Verify proper implementation of HTTPS and data encryption.
+
+Test error handling to ensure no sensitive information is exposed.
+
+Validate user password strength enforcement.
+
+Test for improper access to restricted pages.
+
+Ensure secure API key storage in environment variables.
+
+Test brute force attack protection on login screens.
+
+Check for proper log-out and session timeout implementation.
+
+5. API Test Cases
+Validate API response codes (200, 400, 401, 403, 500).
+
+Check API response times under different loads.
+
+Test input validation for API requests.
+
+Verify authentication and authorization mechanisms.
+
+Validate API error messages for incorrect requests.
+
+Check API behavior when required fields are missing.
+
+Test API response consistency across versions.
+
+Simulate multiple concurrent API calls.
+
+Ensure proper CORS policy implementation.
+
+Verify API rate limiting and throttling behavior.
+
+6. Cross-browser Testing
+Verify consistent appearance in Chrome, Firefox, Safari, and Edge.
+
+Test responsive behavior across different viewport sizes.
+
+Validate touch interactions on mobile devices.
+
+Check font rendering across different browsers.
+
+Test performance metrics across browser environments.
+
+Ensure forms and modals behave consistently across browsers.
+
+Check local storage, cookies, and session behavior.
+
+Validate JavaScript compatibility on different browser engines.
+
+Test video and media content playback across browsers.
+
+Ensure CSS and animations work smoothly everywhere.
+
+7. Test Cases for URL-based Analysis
+Verify homepage links and redirections.
+
+Test URL encoding/decoding behavior.
+
+Validate the website's HTTPS redirection.
+
+Check for broken links using automated tools.
+
+Ensure URL parameters do not expose sensitive data.
+
+Test canonical URLs for proper SEO indexing.
+
+Validate the website’s sitemap.xml and robots.txt.
+
+Verify Open Graph and meta tags for social media previews.
+
+Ensure error pages (404, 500) are properly handled.
+
+Check URL-based language switching (if applicable).
+
+8. CI/CD Testing
+Verify automated test execution in CI/CD pipelines.
+
+Ensure proper rollback mechanisms in case of failed deployments.
+
+Test environment variables and secrets management.
+
+Validate automated code linting and formatting checks.
+
+Verify build time performance for faster deployments.
+
+Check for proper deployment logs and error tracking.
+
+Test integration of external APIs in CI/CD pipelines.
+
+Ensure feature flags work correctly in different environments.
+
+Validate blue-green or canary deployment mechanisms.
+
+Monitor real-time alerts for deployment failures.
+
+9. File Upload Test Cases (Images, PDFs, etc.)
+Verify allowed file formats for uploads.
+
+Test maximum and minimum file size limits.
+
+Check error handling for invalid file types.
+
+Ensure secure storage of uploaded files.
+
+Validate file preview functionality before upload.
+
+Test file compression for optimal storage use.
+
+Verify correct file retrieval after upload.
+
+Ensure multi-file uploads work correctly.
+
+Test file upload behavior on slow networks.
+
+Check access control for uploaded files (e.g., private vs. public).
+
+10. AI Model Testing (If applicable)
+Validate accuracy of AI-generated responses.
+
+Test AI model behavior with edge cases and adversarial inputs.
+
+Verify response consistency across multiple runs.
+
+Ensure the AI model handles bias mitigation properly.
+
+Test model retraining and deployment processes.
+
+Check AI system response times for real-time applications.
+
+Verify AI-generated test cases align with expected business logic.
+
+Validate AI model’s integration with front-end systems.
+
+Test fallback mechanisms when AI model fails.
+
+Ensure compliance with AI ethics and data privacy policies.
+1. Functional Test Cases
+Verify user login functionality with valid and invalid credentials.
+
+Test form validation for all required fields.
+
+Validate error messages for invalid inputs.
+
+Check navigation between all major screens.
+
+Verify data persistence across sessions.
+
+Ensure search functionality returns correct results.
+
+Test CRUD operations (Create, Read, Update, Delete) for user data.
+
+Validate logout functionality and session expiration handling.
+
+Test user roles and permissions.
+
+Check that email verification and password reset processes work correctly.
+
+2. UI/UX Test Cases
+Validate responsive design on mobile, tablet, and desktop.
+
+Check color contrast for accessibility compliance (WCAG standards).
+
+Verify all buttons and interactive elements have proper hover states.
+
+Test keyboard navigation for accessibility compliance.
+
+Validate form field focus states and tab order.
+
+Check typography consistency (font sizes, colors, spacing).
+
+Ensure correct alignment of elements across different screen sizes.
+
+Verify animations and transitions work smoothly.
+
+Test dark mode or theme switching functionality (if available).
+
+Ensure error/success messages are readable and well-positioned.
+
+3. Performance Test Cases
+Measure page load time under various network conditions.
+
+Test application behavior under high user load.
+
+Validate API response times for critical operations.
+
+Check memory usage during extended application use.
+
+Test application startup time on various devices.
+
+Simulate stress testing by increasing concurrent users.
+
+Evaluate database query execution times.
+
+Measure time taken for complex computations.
+
+Test for performance degradation over time (long-duration tests).
+
+Check response time of third-party integrations (if any).
+
+4. Security Test Cases
+Validate input sanitization for all form fields.
+
+Test for common vulnerabilities like SQL injection, XSS, CSRF.
+
+Check secure cookie handling and session management.
+
+Verify proper implementation of HTTPS and data encryption.
+
+Test error handling to ensure no sensitive information is exposed.
+
+Validate user password strength enforcement.
+
+Test for improper access to restricted pages.
+
+Ensure secure API key storage in environment variables.
+
+Test brute force attack protection on login screens.
+
+Check for proper log-out and session timeout implementation.
+
+5. API Test Cases
+Validate API response codes (200, 400, 401, 403, 500).
+
+Check API response times under different loads.
+
+Test input validation for API requests.
+
+Verify authentication and authorization mechanisms.
+
+Validate API error messages for incorrect requests.
+
+Check API behavior when required fields are missing.
+
+Test API response consistency across versions.
+
+Simulate multiple concurrent API calls.
+
+Ensure proper CORS policy implementation.
+
+Verify API rate limiting and throttling behavior.
+
+6. Cross-browser Testing
+Verify consistent appearance in Chrome, Firefox, Safari, and Edge.
+
+Test responsive behavior across different viewport sizes.
+
+Validate touch interactions on mobile devices.
+
+Check font rendering across different browsers.
+
+Test performance metrics across browser environments.
+
+Ensure forms and modals behave consistently across browsers.
+
+Check local storage, cookies, and session behavior.
+
+Validate JavaScript compatibility on different browser engines.
+
+Test video and media content playback across browsers.
+
+Ensure CSS and animations work smoothly everywhere.
+
+7. Test Cases for URL-based Analysis
+Verify homepage links and redirections.
+
+Test URL encoding/decoding behavior.
+
+Validate the website's HTTPS redirection.
+
+Check for broken links using automated tools.
+
+Ensure URL parameters do not expose sensitive data.
+
+Test canonical URLs for proper SEO indexing.
+
+Validate the website’s sitemap.xml and robots.txt.
+
+Verify Open Graph and meta tags for social media previews.
+
+Ensure error pages (404, 500) are properly handled.
+
+Check URL-based language switching (if applicable).
+
+8. CI/CD Testing
+Verify automated test execution in CI/CD pipelines.
+
+Ensure proper rollback mechanisms in case of failed deployments.
+
+Test environment variables and secrets management.
+
+Validate automated code linting and formatting checks.
+
+Verify build time performance for faster deployments.
+
+Check for proper deployment logs and error tracking.
+
+Test integration of external APIs in CI/CD pipelines.
+
+Ensure feature flags work correctly in different environments.
+
+Validate blue-green or canary deployment mechanisms.
+
+Monitor real-time alerts for deployment failures.
+
+9. File Upload Test Cases (Images, PDFs, etc.)
+Verify allowed file formats for uploads.
+
+Test maximum and minimum file size limits.
+
+Check error handling for invalid file types.
+
+Ensure secure storage of uploaded files.
+
+Validate file preview functionality before upload.
+
+Test file compression for optimal storage use.
+
+Verify correct file retrieval after upload.
+
+Ensure multi-file uploads work correctly.
+
+Test file upload behavior on slow networks.
+
+Check access control for uploaded files (e.g., private vs. public).
+
+10. AI Model Testing (If applicable)
+Validate accuracy of AI-generated responses.
+
+Test AI model behavior with edge cases and adversarial inputs.
+
+Verify response consistency across multiple runs.
+
+Ensure the AI model handles bias mitigation properly.
+
+Test model retraining and deployment processes.
+
+Check AI system response times for real-time applications.
+
+Verify AI-generated test cases align with expected business logic.
+
+Validate AI model’s integration with front-end systems.
+
+Test fallback mechanisms when AI model fails.
+
+Ensure compliance with AI ethics and data privacy policies.
       }
 
       setResult(sampleResult)
