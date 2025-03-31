@@ -17,7 +17,7 @@ type EnvVar = {
 
 export default function EnvironmentVariablesSetup() {
   const [envVars, setEnvVars] = useState<EnvVar[]>([
-    { id: "1", key: "OPENAI_API_KEY", value: "", isSecret: true },
+    { id: "1", key: "HACKNUTHON", value: "", isSecret: true },
     { id: "2", key: "NEXT_PUBLIC_APP_URL", value: "", isSecret: false },
   ])
   const [isSaving, setIsSaving] = useState(false)
