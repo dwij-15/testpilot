@@ -154,14 +154,6 @@ export default function Home() {
                 <p className="text-muted-foreground">Modern frontend framework for optimal performance</p>
               </div>
               <div className="p-6 rounded-lg border border-border shadow-sm bg-card">
-                <h3 className="text-xl font-semibold mb-2">OpenAI GPT-4o</h3>
-                <p className="text-muted-foreground">Advanced AI model for test generation and validation</p>
-              </div>
-              <div className="p-6 rounded-lg border border-border shadow-sm bg-card">
-                <h3 className="text-xl font-semibold mb-2">Vercel AI SDK</h3>
-                <p className="text-muted-foreground">Edge functions for efficient AI processing</p>
-              </div>
-              <div className="p-6 rounded-lg border border-border shadow-sm bg-card">
                 <h3 className="text-xl font-semibold mb-2">Recharts</h3>
                 <p className="text-muted-foreground">Interactive data visualization for analytics</p>
               </div>
